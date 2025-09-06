@@ -19,23 +19,16 @@ variable "server_name" {
   }
 }
 
-variable "location" {
-  description = "Hetzner location ID. See: https://docs.hetzner.com/cloud/general/locations/#what-locations-are-there"
-  type        = string
-  nullable    = true
-}
-
 variable "datacenter" {
   description = "Hetzner datacenter ID. See: https://docs.hetzner.com/cloud/general/locations/#what-datacenters-are-there"
   type        = string
-  nullable    = true
+  nullable    = false
 }
 
 resource "hcloud_server" "server" {
   name        = var.server_name
   image       = "debian-13"
   server_type = "cpx11"
-  location    = var.location
   datacenter  = var.datacenter
   shutdown_before_deletion = true
   public_net {

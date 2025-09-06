@@ -6,6 +6,5 @@ module "hetzner_server" {
   source = "./modules/terraform_hcloud_server"
 
   server_name = "kubernetes"
-  location    = "eu-central"
-  datacenter  = null
+  datacenter  = "fsn1-dc14"
 }
