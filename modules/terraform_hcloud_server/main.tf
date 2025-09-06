@@ -23,14 +23,12 @@ variable "location" {
   description = "Hetzner location ID. See: https://docs.hetzner.com/cloud/general/locations/#what-locations-are-there"
   type        = string
   nullable    = true
-  default     = null
 }
 
 variable "datacenter" {
   description = "Hetzner datacenter ID. See: https://docs.hetzner.com/cloud/general/locations/#what-datacenters-are-there"
   type        = string
   nullable    = true
-  default     = null
 }
 
 resource "hcloud_server" "server" {
