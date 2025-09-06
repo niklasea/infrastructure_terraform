@@ -7,4 +7,5 @@ module "hetzner_server" {
 
   server_name = "kubernetes"
   location    = "eu-central"
+  datacenter  = null
 }
