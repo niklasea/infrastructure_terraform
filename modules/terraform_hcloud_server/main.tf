@@ -36,7 +36,7 @@ variable "datacenter" {
 resource "hcloud_server" "server" {
   name        = var.server_name
   image       = "debian-13"
-  server_type = "CPX11"
+  server_type = "cpx11"
   location    = var.location
   datacenter  = var.datacenter
   shutdown_before_deletion = true
